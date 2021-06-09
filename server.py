@@ -5,7 +5,6 @@ from twisted.internet import reactor
 
 import sys
 
-
 class ServerProtocol(DatagramProtocol):
     """
     Server protocol implementation.
@@ -46,6 +45,7 @@ class ServerProtocol(DatagramProtocol):
                 self.addresses.pop(0)
 
                 print 'Linked peers'
+                
 if __name__ == '__main__':
     if len(sys.argv) < 2:
         print "Usage: ./server.py PORT"
